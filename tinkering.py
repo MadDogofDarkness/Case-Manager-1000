@@ -30,9 +30,13 @@ class Button:
             return True
         else:
             return False
+
     def checkPoint(self, point):
+        #check if point is contained by the area of the button
         x = point[0]
         y = point[1]
+        #position of box is -5 of x pos and + 10 of the surface width
+        #y pos is same as self y pos, and same height as surface
         
 
 class Case:
@@ -44,11 +48,33 @@ class Case:
     def store_to_json(self):
         tostore = f"[({self.case_number})({self.labor})({self.timestamp})]"
         return tostore
+    
+    def restore_from_file(data_input):
+        #idea is to take in a string from the file, parse by character
+        #check for open bracket char
+        #start new Case init
+        #check for open parenthesis
+        #start pulling in case number
+        #when hit end parenthesis stop case number load
+        #when hit next open parenthesis
+        #load in labor
+        #when hit next close parenthesis stop labor load
+        #when hit next open parenthesis start time data load
+        #load data for time stamp
+        #when hit next close parenthesis stop time stamp load
+        #generate timestamp
+        #when hit close bracket stop init and return object to list
+        #when eof stop parsing
+        #return object list
+
 
 '''
 app functions
 
 '''
+def updateUI(size, font):
+    #updates reactive UI elements
+    #ie grid for updating listed cases
 
 def initUI(size, font):
     Elements = []
@@ -91,7 +117,8 @@ def main():
         
         #check clicked position for buttons
         for e in UIElements:
-            if
+            if #button was clicked
+                #run associated function
         #blitting
         screen.blit(background, (0,0))
         for e in UIElements:
@@ -100,3 +127,4 @@ def main():
         pygame.time.wait(100)
 
 main()
+exit()
