@@ -125,6 +125,7 @@ def main():
             e.display(screen)
         pygame.display.flip()
         pygame.time.wait(100)
-
-main()
-exit()
+if __name__ == '__main__':
+    main()
+    exit()
+  
